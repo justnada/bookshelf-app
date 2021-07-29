@@ -1,0 +1,325 @@
+/******************** import fonts *********************/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+/********************** root variables ********************/
+:root {
+  --base-color: 260;
+
+  --normal-color: hsl(var(--base-color), 58%, 51%);
+  --darker-color: hsl(var(--base-color), 64%, 41%);
+  --lighter-color: hsl(var(--base-color), 66%, 56%);
+  --text-white: white;
+}
+
+/****************************** base *****************************/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    
+}
+
+body, input, button {
+    font-family: 'Poppins', sans-serif;
+}
+
+input, button {
+    font-size: 18px;
+}
+
+main {
+    max-width: 800px;
+    width: 80%;
+    margin: 0 auto;
+    padding: 30px;
+    padding-top: 200px;
+}
+
+/************************* header **********************/
+.header {
+    position: absolute;
+    width: 100%;
+    height: 75vh;
+    background-image: linear-gradient(var(--lighter-color), var(--normal-color));
+    overflow: hidden;
+    z-index: -1;
+}
+
+header .wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url('../img/wave.png');
+    background-size: 1000px 100px;
+}
+.header .wave.wave1 {
+    animation: animate 30s linear infinite;
+    z-index: 1000;
+    opacity: 1;
+    animation-delay: 0s;
+    bottom: 0px;
+}
+.header .wave.wave2 {
+    animation: animate2 15s linear infinite;
+    z-index: 999;
+    opacity: 0.5;
+    animation-delay: -5s;
+    bottom: 10px;
+}
+.header .wave.wave3 {
+    animation: animate 30s linear infinite;
+    z-index: 998;
+    opacity: 0.2;
+    animation-delay: -2s;
+    bottom: 15px;
+}
+.header .wave.wave4 {
+    animation: animate2 5s linear infinite;
+    z-index: 997;
+    opacity: 0.7;
+    animation-delay: -5s;
+    bottom: 20px;
+}
+@keyframes animate {
+    0% {
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: 1000px;
+    }
+}
+@keyframes animate2 {
+    0% {
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: -1000px;
+    }
+}
+
+.title {
+    position: relative;
+    color: white;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-align: center;
+    margin-top: 4.5rem;
+    font-size: 40px;
+}
+
+/**************************** input **************************/
+.input_section {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(154, 160, 185, .05), 0 15px 40px rgba(166, 173, 201, .2);
+    background-color:#F8F9FA;
+}
+
+.input_section > h2 {
+    text-align: center;
+    color: var(--normal-color);
+}
+
+.input_section > form > .input {
+    margin: 8px 0;
+}
+
+.input_section > form > button {
+    background-color: var(--lighter-color);
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.input_section > form > button:hover {
+    background-color: var(--darker-color);
+}
+
+.input_section > form > button > span {
+    font-weight: bold;
+}
+
+.input_section > form > .input > input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #F5F1FF;
+    border: 2px solid var(--lighter-color);
+    border-radius: 8px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.input_section > form > .input > label {
+    color: var(--normal-color);
+    font-weight: bold;
+}
+
+.input_section > form > .input_inline {
+    margin: 12px 0;
+    display: flex;
+    align-items: center;
+}
+
+.input_section > form > .input_inline > label {
+    color: var(--normal-color);
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/*********************** search **********************/
+.search_section {
+    margin: 16px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(154, 160, 185, .05), 0 15px 40px rgba(166, 173, 201, .2);
+    background-color:#F8F9FA;
+}
+
+.search_section > h2 {
+    color: var(--normal-color);
+}
+
+.search_section > form {
+    padding: 16px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr 0.5fr;
+    grid-gap: 10px;
+}
+
+.search_section > form > label {
+    display: flex;
+    align-items: center;
+}
+
+.search_section > form > input {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    background: #F5F1FF;
+    border: 2px solid var(--lighter-color);
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.search_section > form > button {
+    background-color: var(--lighter-color);
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search_section > form > button:hover {
+    background-color: var(--darker-color);
+}
+
+/*************************** book shelf ****************************/
+.book_shelf {
+    margin: 16px 0 0 0;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(154, 160, 185, .05), 0 15px 40px rgba(166, 173, 201, .2);
+    background-color:#F8F9FA;;
+}
+
+.book_shelf > h2 {
+    color: var(--normal-color);
+}
+
+.book_shelf > .book_list {
+    padding: 16px;
+}
+
+.book_shelf > .book_list > .book_item {
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px 0;
+    box-shadow: 0 5px 10px rgba(154, 160, 185, .2), 0 15px 40px rgba(166, 173, 201, .2);
+}
+
+.book_shelf > .book_list > .book_item > .book_title {
+    color: var(--normal-color);
+}
+
+.book_shelf > .book_list > .book_item > h3, p {
+    margin: 15px 0;
+}
+
+.book_shelf > .book_list > .book_item > .action > button {
+    border: 0;
+    padding: 5px;
+    margin: 0 10px 0 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.book_shelf > .book_list > .book_item > .action > .green {
+    background-image: linear-gradient(#28cd54, #3fe100);
+    color: white;
+    padding: 10px;
+}
+
+.book_shelf > .book_list > .book_item > .action > .green:hover {
+    background-image: linear-gradient(#20bb4a, #37c200);
+}
+
+.book_shelf > .book_list > .book_item > .action > .red {
+    background-image: linear-gradient(#c92b2b, #ff3d3d);
+    color: white;
+    padding: 10px;
+}
+
+.book_shelf > .book_list > .book_item > .action > .red:hover {
+    background-image: linear-gradient(#b32525, #cf2828);
+}
+
+/*************************** footer *****************************/
+.footer {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(var(--normal-color), var(--lighter-color));
+    color: var(--text-white);
+    position: sticky;
+}
+
+.footer_text {
+    letter-spacing: .1rem;
+    font-weight: 500;
+}
+
+/********************************* media query **********************************/
+@media screen and (max-width: 600px){
+    .title {
+        font-size: 2rem;
+        letter-spacing: 0.1rem;
+        text-align: center;
+        padding: 30px;
+        margin-top: 1.5rem;
+    }
+
+    .book_shelf > .book_list > .book_item > .action > .green {
+        margin-bottom: 10px;
+    }
+
+    .footer_text {
+        font-size: 0.8rem;
+        text-align: center;
+        letter-spacing: 0;
+    }
+}
