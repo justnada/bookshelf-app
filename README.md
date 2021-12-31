@@ -2,7 +2,8 @@
 Bookshelf App is a javascript project for completing Dicoding Indonesia courses.
 
 ### Previews
-![image](https://user-images.githubusercontent.com/50564780/147820650-dedec11d-5fd1-469f-909e-2f3aa8247f0d.png)
+
+<img src="https://user-images.githubusercontent.com/50564780/147820694-4d8ae353-91c1-42e2-8318-864b188b71cf.png" width="600">
 
 ![image](https://user-images.githubusercontent.com/50564780/147820694-4d8ae353-91c1-42e2-8318-864b188b71cf.png)
 
